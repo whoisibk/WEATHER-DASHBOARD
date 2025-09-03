@@ -1,4 +1,3 @@
-<style>
     :root{
       --bg-dark:#0d0d0d;
       --card-bg:#1e1e1e;
@@ -297,4 +296,3 @@
       }
       .overview-grid{grid-template-columns:1fr}
     }
-  </style>
