@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
+  <script src="backend.js"></script>
+
   <title>Weather Dashboard</title>
 </head>
 <body>
@@ -19,9 +21,11 @@
 
       <!-- CENTER: search (shorter, with space on both sides) -->
       <div class="topbar-center">
-        <input id="search-input" class="search" type="search" placeholder="Search city"/>
+        <form id="searchForm">
+        <input id="search-input" class="search" type="search" placeholder="Search city" required/>
+        <datalist id="recentSearches"></datalist>
         <div class="search-icon-box"><p class="search-icon">&#128269</p></div>
-        
+        </form>
       </div>
 
       <!-- RIGHT: welcome/profile -->
