@@ -1,10 +1,10 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css">
-  <script src="backend.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Weather Dashboard</title>
 </head>
 <body>
@@ -51,7 +51,7 @@
         </div>
         <div class="temp-row">
           <div class="temp"><span id="current-temp">--</span>°</div>
-          <img id="current-icon" class="wicon" alt="Current condition icon" />
+          <!-- <img id="current-icon" class="wicon" alt="Current condition icon" /> -->
         </div>
         <div class="kv">
           <span>Condition:</span> <strong id="current-condition">--</strong>
@@ -67,7 +67,7 @@
 
       <!-- FORECAST (top-middle) -->
       <section id="forecast" class="card" aria-label="7-day forecast">
-        <div class="forecast-title">7-Day Forecast</div>
+        <div class="forecast-title">5-Day Forecast</div>
         <div class="forecast-row" id="forecast-row">
           <!-- 7 ready-to-wire day cards -->
           <div class="day-card" id="fc-0">
@@ -100,18 +100,7 @@
             <div class="day-temp"><span id="fc-4-temp">--</span>°</div>
             <div class="day-range"><span id="fc-4-max">--</span>° / <span id="fc-4-min">--</span>°</div>
           </div>
-          <div class="day-card" id="fc-5">
-            <div class="day-name" id="fc-5-name">--</div>
-            <img class="day-icon" id="fc-5-icon" alt="icon"/>
-            <div class="day-temp"><span id="fc-5-temp">--</span>°</div>
-            <div class="day-range"><span id="fc-5-max">--</span>° / <span id="fc-5-min">--</span>°</div>
-          </div>
-          <div class="day-card" id="fc-6">
-            <div class="day-name" id="fc-6-name">--</div>
-            <img class="day-icon" id="fc-6-icon" alt="icon"/>
-            <div class="day-temp"><span id="fc-6-temp">--</span>°</div>
-            <div class="day-range"><span id="fc-6-max">--</span>° / <span id="fc-6-min">--</span>°</div>
-          </div>
+          
         </div>
       </section>
 
@@ -137,15 +126,13 @@
         <div class="overview-grid">
           <div class="card">
             <div class="section-title">Wind Status</div>
-            <div id="wind-chart" aria-label="wind chart placeholder"></div>
             <div><strong id="wind-speed">--</strong> km/h</div>
             <div id="wind-direction" class="muted">--</div>
           </div>
 
           <div class="card">
-            <div class="section-title">UV Index</div>
-            <div id="uv-gauge" aria-label="uv gauge placeholder"></div>
-            <div><strong id="uv-index">--</strong> UV</div>
+            <div class="section-title">Pressure</div>
+            <div><strong id="pressure-value">--</strong> hPa</div>
           </div>
 
           <div class="lg-card" id="hero-card" aria-label="Hero image area">
@@ -209,6 +196,8 @@
       </aside>
     </main>
   </div>
+    <script type="module" src="backend.js"></script>
+
 </body>
 </html>
 

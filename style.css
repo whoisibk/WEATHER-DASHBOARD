@@ -184,7 +184,7 @@
         transform: scale(0.92);
     }
     /* Mini visuals placeholders for JS */
-    #wind-chart,#uv-gauge{height:80px;border-radius:12px;background:#2a2a2a}
+    #wind-chart,#uv-gauge{height:80px;border-radius:12px;background:#2a2a2a; font-size: 50px}
 
     /* FAVORITES (bottom-right) */
     #favorites{grid-area:favorites}
@@ -243,6 +243,9 @@
     color: var(--text);
     }
     
+    #wind-speed, #pressure-value, #humidity-value, #visibility-value {
+      font-size: 40px;
+    }
     .tab.active::after {
     content: "";
     position: absolute;
