@@ -1,5 +1,4 @@
-const apiKey = "41fad815a12711def87e9d275e436358";
-
+import apiKey from "./config.js";
 export async function getCoordinates(city) {
   if (!city) {
     alert("No city provided");
