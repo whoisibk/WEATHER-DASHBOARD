@@ -93,3 +93,23 @@ export async function fetchForecast(lat, lon) {
         alert(error.message);
     }
 }
+
+const btn = document.getElementById("btn");
+const id = document.getElementById("icon");
+
+let isPower = true;
+
+btn.addEventListener("click", function() {
+  isPower = !isPower;
+
+  if(isPower) {
+    icon.innerHTML = `<i class="fas fa-moon"></i>`;
+    icon.className = 'moon-icon';
+    document.body.classList.add('dark-mode');
+  }
+  else {
+    icon.innerHTML = `<i class="far fa-sun"></i>`;
+    icon.className = 'sun-icon';
+    document.body.classList.remove("dark-mode");
+  }
+})

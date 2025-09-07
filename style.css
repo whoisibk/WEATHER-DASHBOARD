@@ -131,8 +131,9 @@
       background:#232323;
       box-shadow:var(--shadow);
       flex-shrink:0;
+      height: 250px;
     }
-    .day-name{color:var(--muted);font-size:13px;margin-bottom:6px}
+    .day-name{color:var(--muted);font-size:13px;margin-bottom:6px; padding-top: 40px;}
     .day-icon{width:32px;height:32px;margin:6px auto}
     .day-temp{font-size:18px;font-weight:700;margin-top:4px}
     .day-range{color:var(--muted);font-size:12px}
@@ -164,6 +165,7 @@
       display:flex;align-items:flex-end;justify-content:center;
       background-size:cover;background-position:center;
       position:relative;
+      background-image: url("img/scraper.webp");
     }
     .fav-btn{
       position:absolute;
@@ -309,8 +311,43 @@
     filter: brightness(1.2);
     }
 
+body.dark-mode {
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
 
+body.dark-mode .kv {
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
 
+body.dark-mode .temp-row {
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
+
+body.dark-mode .day-card {
+  background-color: #e4e4e4fe;
+}
+body.dark-mode .card {
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
+body.dark-mode .kv strong {
+  color: #0d0d0d;
+}
+ body.dark-mode .topbar-right #welcome-text {
+  color: #0d0d0d;
+ }
+
+ body.dark-mode .day-temp, .day-name, .day-range{
+  color: black;
+ }
+   body.dark-mode .day-name{
+    font-size: 18px;
+    font-weight: 600;
+   } 
+ 
     
     @media (max-width:1100px){
       .page{
