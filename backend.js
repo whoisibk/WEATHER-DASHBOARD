@@ -150,7 +150,22 @@ searchForm.addEventListener("submit", async e => {
 });
 
 // On page load
-window.addEventListener("DOMContentLoaded", () => {
+// window.addEventListener("DOMContentLoaded", () => {
+//   if (currentCity) {
+//     setCurrentCity(
+//       currentCity.city,
+//       currentCity.country,
+//       currentCity.temp,
+//       currentCity.icon
+//     );
+//     renderFavorites();
+//   }
+// });
+
+
+
+// On page load
+window.addEventListener("DOMContentLoaded", async () => {
   if (currentCity) {
     setCurrentCity(
       currentCity.city,
@@ -159,5 +174,9 @@ window.addEventListener("DOMContentLoaded", () => {
       currentCity.icon
     );
     renderFavorites();
+    await performSearch(currentCity.city); 
+  } else {
+    await performSearch("Lagos");
+    searchInput.value = "Lagos"; 
   }
 });

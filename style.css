@@ -49,9 +49,8 @@
     }
     .search-icon{
       font-size:22px;
-      margin-top: -2px;
     }
-    .search-icon-box{
+    /* .search-icon-box{
       margin-left: -35px;
       padding-top: 3px;
       padding-right: 20px;
@@ -68,8 +67,25 @@
       transition: 0.8s;
       transform: scaleX(1.05);
       transform: scaleY(0.9);
+    } */
+
+    .search-icon-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;   
+      height: 37px;
+      width: 37px;               
+      margin-left: -37px;        
+      border-radius: 50%;        
+      background: var(--card-bg);
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
+    .search-icon-box:hover {
+      background-color: rgb(71, 70, 70);
+      transform: scale(1.05, 0.95);
+    }
 
     .search::placeholder{color:var(--muted)}
     .topbar-right{
