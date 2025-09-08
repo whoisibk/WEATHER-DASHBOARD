@@ -40,7 +40,7 @@
     .search{
       height: 37px;
       width:100%;
-      max-width:360px;           /* shorter search bar */
+      max-width:360px;           
       background:var(--card-bg);
       border:none;border-radius:999px;
       padding:10px 16px;color:var(--text);
@@ -50,24 +50,6 @@
     .search-icon{
       font-size:22px;
     }
-    /* .search-icon-box{
-      margin-left: -35px;
-      padding-top: 3px;
-      padding-right: 20px;
-      margin-top: -0.3px;
-      border-radius:999px;
-      height: 37px;
-      background:var(--card-bg);
-      width: 35px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .search-icon-box:hover{
-      background-color: rgb(71, 70, 70);
-      transition: 0.8s;
-      transform: scaleX(1.05);
-      transform: scaleY(0.9);
-    } */
 
     .search-icon-box {
       display: flex;
@@ -253,9 +235,9 @@
     .humidity-card:hover,
     .visibility-card:hover,
     .large-card:hover {
-      background-color: #2a2a2a; /* lighter shade of --card-bg */
+      background-color: #2a2a2a; 
       transition: background-color 0.3s ease;
-      cursor: pointer; /* makes it feel interactive */
+      cursor: pointer; 
     }
     
     .tabs {
