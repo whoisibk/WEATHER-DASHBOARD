@@ -1,4 +1,4 @@
-    :root{
+:root{
       --bg-dark:#0d0d0d;
       --card-bg:#1e1e1e;
       --text:#ffffff;
@@ -61,6 +61,7 @@
       background:var(--card-bg);
       width: 35px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
     .search-icon-box:hover{
       background-color: rgb(71, 70, 70);
@@ -133,10 +134,10 @@
       flex-shrink:0;
       height: 250px;
     }
-    .day-name{color:var(--muted);font-size:13px;margin-bottom:6px; padding-top: 40px;}
+    .day-name{color:white;font-size:18px;margin-bottom:6px; padding-top: 40px; font-weight: 600;}
     .day-icon{width:32px;height:32px;margin:6px auto}
-    .day-temp{font-size:18px;font-weight:700;margin-top:4px}
-    .day-range{color:var(--muted);font-size:12px}
+    .day-temp{font-size:18px;font-weight:700;margin-top:4px; color: #ffffff;}
+    .day-range{color:white;font-size:12px}
 
     /* RAIN (top-right) */
     #rain{grid-area:rain}
@@ -177,7 +178,9 @@
       padding:10px 16px;
       border-radius:999px;
       cursor:pointer;
-      font-weight:600
+      font-weight:600;
+      transition: all 0.3s ease;
+      font-size: 12px;
     }
     .fav-btn:hover{
         background:#0d6efd; 
@@ -185,6 +188,18 @@
     .fav-btn:active{
         transform: scale(0.92);
     }
+    
+    /* Disabled state for favorites button */
+    .fav-btn[style*="not-allowed"] {
+        background: #555 !important;
+        cursor: not-allowed !important;
+    }
+    
+    .fav-btn[style*="not-allowed"]:hover {
+        background: #555 !important;
+        transform: none !important;
+    }
+    
     /* Mini visuals placeholders for JS */
     #wind-chart,#uv-gauge{height:80px;border-radius:12px;background:#2a2a2a; font-size: 50px}
 
@@ -197,8 +212,15 @@
     }
     .fav-card{
       display:flex;align-items:center;justify-content:space-between;
-      padding:14px;border-radius:14px;background:#232323
+      padding:14px;border-radius:14px;background:#232323;
+      cursor:pointer;
+      transition: background-color 0.3s ease;
     }
+    
+    .fav-card:hover {
+      background-color: #2a2a2a;
+    }
+    
     .fav-meta{display:flex;flex-direction:column;gap:2px}
     .fav-city{font-weight:600}
     .fav-loc{color:var(--muted);font-size:12px}
@@ -214,8 +236,7 @@
     .uv-card:hover,
     .humidity-card:hover,
     .visibility-card:hover,
-    .large-card:hover,
-    .fav-card:hover {
+    .large-card:hover {
       background-color: #2a2a2a; /* lighter shade of --card-bg */
       transition: background-color 0.3s ease;
       cursor: pointer; /* makes it feel interactive */
@@ -340,12 +361,21 @@ body.dark-mode .kv strong {
   color: #0d0d0d;
  }
 
- body.dark-mode .day-temp, .day-name, .day-range{
+ body.dark-mode .day-temp{
   color: black;
+ }
+
+ 
+
+ 
+ body.dark-mode .day-range {
+ color: #0d0d0d;
  }
    body.dark-mode .day-name{
     font-size: 18px;
     font-weight: 600;
+     color: #0d0d0d;
+
    } 
  
     
