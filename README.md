@@ -11,3 +11,8 @@ LocalStorage for saving searches and favorites across sessions.
 Modular JavaScript for cleaner, reusable, and maintainable code.
 
 The app provides a hands-on experience with frontend development, combining HTML, CSS, and JavaScript to create an interactive and user-friendly weather tool.
+
+
+
+### API INTEGRATION
+ENSURE to replace "YOUR_API_KEY" with your actual OpenWeather API key.

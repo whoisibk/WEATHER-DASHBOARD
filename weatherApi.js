@@ -12,7 +12,7 @@ export async function getCoordinates(city) {
     if (!res.ok) throw new Error("Failed to fetch coordinates");
 
     const data = await res.json();
-    console.log("Geo API response:", data); // ✅ see exactly what you got
+    console.log("Geo API response:", data);
     console.log("Length:", data.length)
 console.log("City value being sent:", city);
 
